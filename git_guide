@@ -37,6 +37,26 @@ git tag
 git show <tag name>
     列出tag name指定的那次提交的详细信息
 
+#########分支相关#######
+在*/.git/refs/heads/目录下有多少文件就有多少分支
+切换分支就是改变.git目录下的HEAD文件的内容
+git branch
+    列出分支，删除分支
+git branch <branch name>
+    创建分支
+git branch -d <branch name>
+    删除指定的分支,但是如果你要删除的分支中有比主分支还新的文件则会报错
+git branch -D <branch name>
+    同上，，但是解决上一个命令报错的情况，强制删除
+git checkout <branch name>
+    切换到另一个分支
+git checkout -b <branch name>
+    同上，但是如果指定的分支不存在，则创建并切换
+git merge
+    将一个分支合并到当前分支
+git cherry-pick
+    将另一个分支上指定的文件合并到当前分支
+
 git diff:
     默认比较工作区和本地仓库最后一次提交的版本的比较
 git diff --staged
