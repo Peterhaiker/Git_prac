@@ -57,6 +57,21 @@ git merge
 git cherry-pick 哈希值
     将另一个分支上指定的文件合并到当前分支
 
+########快速推进########
+分支合并还是分支，但快速推进合并就是真正合并为一条直线没有分叉,按如下步骤顺序进行
+git rebase <branch1> <branch2>
+    基于branch1来重做branch2，就是在branch1后面加上branch2新增的，然后branch    2就是这个新形式的分支(不是另外创建了一个分支)
+git checkout branch1
+    切回branch1分支
+git merge branch2
+    将刚刚更新的branch2合并到所在的分支
+至此成功，但是如果branch1和branch2有同名文件但内容修改的不同则合并时会冲突，此时您会在它创建的临时分支内等待您来解决冲突
+1：首先用编辑器打开冲突的文件解决冲突后(编辑一下文件)保存退出
+2：执行git add <冲突文件名>
+3：运行git rebase --continue
+4：git checkout branch1
+5：git merge branch2
+
 git diff:
     默认比较工作区和本地仓库最后一次提交的版本的比较
 git diff --staged
