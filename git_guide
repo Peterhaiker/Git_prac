@@ -16,7 +16,6 @@ git log
     显示提交的历史记录
 
 #######撤销系列命令######
-
 git checkout -- <filename>
     当工作区的文件被修改了，想要回退到上一个版本，用此命令
 git stash
@@ -27,6 +26,16 @@ git reset HEAD <file>
     当在工作区修改过的文件被提交到暂存区，想要重新回退到工作区也就是提交之前    修改之后的状态，用此命令
 git reset --hard <哈希值>
     如果被修改的文件已经交到本地仓库，那么此命令能将仓库中这个文件回退到哈希值指定的那次提交
+
+#######tag标签相关#######
+git tag
+    列出你的所有标签
+git tag -a <tag name> -m "tag comment"
+    给当前最近一次的提交打上标签。tag name是标签名，tag comment是给标签添加     的注释
+git tag -a <tag name> -m "tag comment" <哈希值>
+    同上，一样是打标签，但是这次给提供的hash值指定的提交打上标签
+git tag <tag name>
+    列出指定标签的详细信息
 
 git diff:
     默认比较工作区和本地仓库最后一次提交的版本的比较
