@@ -54,7 +54,7 @@ git checkout -b <branch name>
     同上，但是如果指定的分支不存在，则创建并切换
 git merge
     将一个分支合并到当前分支
-git cherry-pick
+git cherry-pick 哈希值
     将另一个分支上指定的文件合并到当前分支
 
 git diff:
