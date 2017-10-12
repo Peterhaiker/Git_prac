@@ -1,4 +1,4 @@
-####git init:####
+#### git init:
 
     将当前所在目录交由git管理，创建了.git目录
 ####git status:
