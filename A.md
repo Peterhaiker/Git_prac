@@ -1,0 +1,12 @@
+﻿###A###
+hello,world
+```c
+puts("hello,world");
+```
+####B####
+kalsdfjkdfkdsfj
+####C####
+[google](https:\\www.google.com)
+>kdsfj
+kdfjkdf
+dkfjkd
