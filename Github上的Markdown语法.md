@@ -187,7 +187,7 @@ int main(void)
 
 示例如下：
 
-I am iron man[^1].
+I am iron man [^1] .
 
 [^1]: a hero belongs to marval
 
@@ -219,4 +219,4 @@ Markdown converts text to HTML.
 
 Markdown converts text to HTML
 
-*[HTML]: Hyper Text Markup Language
+*[HTML]:  Hyper Text Markup Language
