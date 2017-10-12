@@ -40,7 +40,7 @@ git show <tag name>
 #########分支相关#######
 在*/.git/refs/heads/目录下有多少文件就有多少分支
 切换分支就是改变.git目录下的HEAD文件的内容
-[四种git合并分支方法](http://yanhaijing.com/git/2017/07/14/four-method-for-git-merge/)
+四种git合并分支方法(http://yanhaijing.com/git/2017/07/14/four-method-for-git-merge/)
 git branch
     列出分支，删除分支
 git branch <branch name>
