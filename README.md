@@ -60,8 +60,8 @@
     将另一个分支上指定的文件合并到当前分支  
 ### 快速推进  
 分支合并还是分支，但快速推进合并就是真正合并为一条直线没有分叉,按如下步骤顺序进行  
-### git rebase \<branch1\> \<branch2\>
-    基于branch1来重做branch2，就是在branch1后面加上branch2新增的，然后branch    2就是这个新形式的分支(不是另外创建了一个分支)  
+### git rebase \<branch1\> \<branch2\>  
+    基于branch1来重做branch2，就是在branch1后面加上branch2新增的，然后branch2就是这个新形式的分支(不是另外创建了一个分支)  
 ### git checkout branch1  
     切回branch1分支  
 ### git merge branch2  
