@@ -27,6 +27,8 @@ git config --list
 将暂存区的文件交到本地仓库，注释要写清楚这次的改动  
 #### git commit -a m "注释"  
 同上，不同的是直接从工作区交到本地仓库，前提是提交的文件曾经交给过本地仓库  
+#### git commit --amend
+当你发现还有文件未提交想重新提交时，这个命令可以将这次的提交和上次的提交合并  
 #### git clone url
 将远程仓库克隆到本地，新目录名就是仓库名。如果你想自定义名字在url后加上空格和目录名就可以了  
 #### git status:  
@@ -45,18 +47,16 @@ git config --list
 显示提交的历史记录，有许多参数，可定制显示方式  
 
 ### 撤销系列命令  
-#### git commit --amend
-    当你发现还有文件未提交想重新提交时，这个命令可以将这次的提交和上次的提交合并  
 #### git checkout -- <filename>  
-    当工作区的文件被修改了，想要回退到上一个版本，用此命令  
+当工作区的文件被修改了，想要回退到上一个版本，用此命令  
 #### git stash  
-    同上，区别是上一个命令操作之后不可再后悔，也就是你回退以后不能反悔你这个回退，但是git stash可以  
+同上，区别是上一个命令操作之后不可再后悔，也就是你回退以后不能反悔你这个回退，但是git stash可以  
 #### git stash apply  
-    将上一个回退的命令行为(git stash)撤销，配合git stash使用  
+将上一个回退的命令行为(git stash)撤销，配合git stash使用  
 #### git reset HEAD\<file\>  
-    当在工作区修改过的文件被提交到暂存区，想要重新回退到工作区也就是提交之前修改之后的状态，用此命令  
+当在工作区修改过的文件被提交到暂存区，想要重新回退到工作区也就是提交之前修改之后的状态，用此命令  
 #### git reset --hard\<哈希值\>  
-    如果被修改的文件已经交到本地仓库，那么此命令能将仓库中这个文件回退到哈希值指定的那次提交  
+如果被修改的文件已经交到本地仓库，那么此命令能将仓库中这个文件回退到哈希值指定的那次提交  
 
 ### 远程仓库
 #### 查看远程仓库
@@ -68,10 +68,17 @@ git config --list
 * git remote add \<shortname\> <url>  
     添加一个新的远程仓库同时指定一个你可以轻松引用的简写  
 #### 推送到远程仓库  
+* git push
+推送所有分支
 * git push destination origin  
 将本地仓库origin推送到远程仓库destination(这里的destination表示远程仓库，默认通常是origin).默认不推送标签，除非加`--tags`选项  
 * git push -u destination origin  
 指定destination为以后推送的默认仓库，这是在有多个远程仓库和本地仓库相连的情况下需要考虑的  
+#### 创建远程仓库
+* git push origin local_branch
+创建远程分支，origin是远程分支名,local branch必须是本地已创建的分支名  
+* git push origin :remote_branch  
+先删除本地分支，在删除远程分支
 #### 从远程仓库中抓取与拉取  
 * git fetch [remote-name]  
 它会将远程仓库中比本地新的文件拉取下来  
