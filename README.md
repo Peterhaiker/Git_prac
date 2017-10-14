@@ -68,10 +68,17 @@ git config --list
 * git remote add \<shortname\> <url>  
     添加一个新的远程仓库同时指定一个你可以轻松引用的简写  
 #### 推送到远程仓库  
+* git push
+推送所有分支
 * git push destination origin  
 将本地仓库origin推送到远程仓库destination(这里的destination表示远程仓库，默认通常是origin).默认不推送标签，除非加`--tags`选项  
 * git push -u destination origin  
 指定destination为以后推送的默认仓库，这是在有多个远程仓库和本地仓库相连的情况下需要考虑的  
+#### 创建远程仓库
+* git push origin local_branch
+创建远程分支，origin是远程分支名,local branch必须是本地已创建的分支名  
+* git push origin :remote_branch  
+先删除本地分支，在删除远程分支
 #### 从远程仓库中抓取与拉取  
 * git fetch [remote-name]  
 它会将远程仓库中比本地新的文件拉取下来  
